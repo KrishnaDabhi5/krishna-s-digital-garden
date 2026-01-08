@@ -11,10 +11,10 @@
 @layer base {
   :root {
     /* Warm Cream/Beige Light Theme */
-    --background: 45 33% 97%;
+    --background: 43 30% 96%;
     --foreground: 0 0% 18%;
 
-    --card: 43 27% 93%;
+    --card: 42 25% 92%;
     --card-foreground: 0 0% 18%;
 
     --popover: 45 33% 97%;
