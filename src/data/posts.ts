@@ -50,7 +50,6 @@ The architecture improvements are genuine - the attention mechanism updates lead
 ## The Hype
 
 Claims of "10x better reasoning" need to be taken with a grain of salt...`,
-    featured: true,
   },
   {
     id: "transfer-learning-101",
