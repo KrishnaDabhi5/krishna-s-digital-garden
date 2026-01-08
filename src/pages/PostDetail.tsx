@@ -32,7 +32,7 @@ const PostDetail = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="container-narrow py-16 md:py-24">
+      <main className="max-w-2xl mx-auto px-6 md:px-8 py-16 md:py-24">
         <Link
           to="/posts"
           className="link-accent mb-8 inline-flex items-center gap-2 text-sm"
