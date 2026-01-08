@@ -11,7 +11,7 @@ const PostCard = ({ post }: PostCardProps) => {
     <Link
       to={`/posts/${post.id}`}
       className={cn(
-        "block p-4 rounded-xl transition-all duration-300",
+        "block p-4 rounded-none transition-all duration-300",
         post.featured
           ? "bg-primary text-primary-foreground"
           : "hover:bg-primary hover:text-primary-foreground group"
