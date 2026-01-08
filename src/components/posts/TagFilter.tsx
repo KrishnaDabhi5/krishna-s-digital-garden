@@ -14,7 +14,7 @@ const TagFilter = ({ tags, activeTag, onTagChange }: TagFilterProps) => {
           key={tag}
           onClick={() => onTagChange(tag)}
           className={cn(
-            "px-4 py-1.5 rounded border text-sm font-sans transition-all duration-200 whitespace-nowrap",
+            "px-4 py-1.5 rounded-none border text-sm font-sans transition-all duration-200 whitespace-nowrap",
             activeTag === tag
               ? "bg-primary text-primary-foreground border-primary font-medium"
               : "bg-transparent text-primary border-primary/40 hover:border-primary"
