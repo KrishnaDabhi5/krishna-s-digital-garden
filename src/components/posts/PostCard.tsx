@@ -14,7 +14,7 @@ const PostCard = ({ post }: PostCardProps) => {
         "block p-4 rounded-xl transition-all duration-300",
         post.featured
           ? "bg-primary text-primary-foreground"
-          : "hover:bg-card"
+          : "hover:bg-primary hover:text-primary-foreground group"
       )}
     >
       <h3
@@ -27,14 +27,14 @@ const PostCard = ({ post }: PostCardProps) => {
       </h3>
       <p
         className={cn(
-          "text-sm font-sans",
-          post.featured ? "text-primary-foreground/80" : "text-secondary"
+          "text-sm font-sans transition-colors duration-300",
+          post.featured ? "text-primary-foreground/80" : "text-secondary group-hover:text-primary-foreground/80"
         )}
       >
         {post.date}
       </p>
       {post.excerpt && !post.featured && (
-        <p className="text-sm text-secondary mt-2 line-clamp-2">
+        <p className="text-sm text-secondary mt-2 line-clamp-2 transition-colors duration-300 group-hover:text-primary-foreground/80">
           {post.excerpt}
         </p>
       )}
