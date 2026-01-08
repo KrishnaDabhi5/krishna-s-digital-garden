@@ -17,7 +17,7 @@ const projects: Project[] = [
       { icon: <Brain className="w-4 h-4" />, title: "Deep Dives", desc: "Breaking down complex architectures" },
       { icon: <Code className="w-4 h-4" />, title: "Code Tutorials", desc: "Practical implementations & guides" },
     ],
-    cta: { label: "Read Posts", href: "#posts" },
+    cta: { label: "Read Posts", href: "/posts" },
   },
   {
     icon: <Sparkles className="w-5 h-5" />,
