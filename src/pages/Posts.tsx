@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import SearchBar from "@/components/posts/SearchBar";
 import TagFilter from "@/components/posts/TagFilter";
 import PostCard from "@/components/posts/PostCard";
-import NewsletterCard from "@/components/posts/NewsletterCard";
 import { posts, allTags } from "@/data/posts";
 
 const Posts = () => {
@@ -35,10 +34,8 @@ const Posts = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="container-narrow py-16 md:py-24">
+      <main className="container-narrow py-8 md:py-12">
         <h1 className="section-heading mb-8">writings</h1>
-
-        <NewsletterCard />
 
         <SearchBar value={searchQuery} onChange={setSearchQuery} />
 

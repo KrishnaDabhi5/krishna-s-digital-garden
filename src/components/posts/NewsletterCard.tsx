@@ -2,8 +2,8 @@ import { ArrowRight } from "lucide-react";
 
 const NewsletterCard = () => {
   return (
-    <div className="bg-card border border-border rounded-xl p-6 mb-8">
-      <div className="flex items-start gap-4">
+    <div className="card-style mb-8">
+      <div className="flex items-start gap-6">
         <div className="w-12 h-12 bg-foreground/10 rounded-lg flex items-center justify-center text-xl shrink-0">
           📝
         </div>

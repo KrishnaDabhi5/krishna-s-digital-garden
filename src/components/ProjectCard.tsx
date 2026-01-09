@@ -7,7 +7,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="border border-border/40 p-6 transition-all duration-300 hover:border-primary/40">
+    <div className="card-style">
       <h3 className="font-serif text-xl font-bold mb-2">{project.title}</h3>
       <p className="text-muted-foreground text-sm mb-6">{project.description}</p>
 

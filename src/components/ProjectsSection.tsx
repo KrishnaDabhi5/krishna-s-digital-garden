@@ -12,22 +12,22 @@ const projects: Project[] = [
   {
     icon: <BookOpen className="w-5 h-5" />,
     title: "AI Research Blog",
-    description: "Deep dives into ML architectures, hands-on implementation insights, and explorations of cutting-edge AI research.",
+    description: "Practical AI insights based on real projects and experiments.I simplify complex ML concepts, explain modern architectures, and share learnings from building production-ready AI systems.",
     features: [
-      { icon: <Brain className="w-4 h-4" />, title: "Deep Dives", desc: "Breaking down complex architectures" },
+      { icon: <Brain className="w-4 h-4" />, title: "Deep Dives", desc: "Breaking down ML and DL architectures with real use cases" },
       { icon: <Code className="w-4 h-4" />, title: "Code Tutorials", desc: "Practical implementations & guides" },
     ],
-    cta: { label: "Read Posts", href: "#posts" },
+    cta: { label: "Read Posts", href: "/posts" },
   },
   {
     icon: <Sparkles className="w-5 h-5" />,
     title: "ML Projects",
-    description: "Open-source projects exploring computer vision, NLP, and generative AI. Building tools for the ML community.",
+    description: "Applied AI and ML projects focused on solving real problems. From computer vision and NLP to automation and analytics—built with research thinking and practical execution.",
     features: [
-      { icon: <Code className="w-4 h-4" />, title: "Open Source", desc: "Free and accessible for everyone" },
-      { icon: <Brain className="w-4 h-4" />, title: "Research-Driven", desc: "Based on latest papers & techniques" },
+      { icon: <Code className="w-4 h-4" />, title: "Real-World AI", desc: "Projects built for real data and real impacte" },
+      { icon: <Brain className="w-4 h-4" />, title: "End-to-End Systems", desc: "From data and models to deployment and dashboards" },
     ],
-    cta: { label: "View on GitHub", href: "https://github.com/krishnadabhi" },
+    cta: { label: "View on GitHub", href: "https://github.com/krishnadabhi5" },
   },
 ];
 
@@ -62,6 +62,9 @@ export const ProjectsSection = () => {
             
             <a
               href={project.cta.href}
+              {...(project.cta.href.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
             >
               {project.cta.label} <ArrowRight className="w-4 h-4" />

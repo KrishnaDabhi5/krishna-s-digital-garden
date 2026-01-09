@@ -13,26 +13,26 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     icon: <GraduationCap className="w-5 h-5" />,
-    title: "B.Tech in Computer Science",
+    title: "B.Tech in Artificial Intelligence and Data Science",
     company: "University",
-    date: "2021 - Present",
+    date: "2022 - 2026",
     description: "Focusing on AI/ML, Deep Learning, and Computer Vision research.",
   },
   {
     icon: <Briefcase className="w-5 h-5" />,
-    title: "AI Research Intern",
-    company: "Tech Lab",
-    companyUrl: "#",
-    date: "Jun 2024 - Present",
-    description: "Working on LLM optimization and fine-tuning for domain-specific applications.",
+    title: "Co-Founder & CTO",
+    company: "AIRAA infotech",
+    companyUrl: "https://www.instagram.com/ai.r.aa/",
+    date: "Dec 2025 - Present",
+    description: "AIRAA Infotech builds AI-powered software and digital products for startups and businesses. It focuses on AI, data-driven solutions, and scalable web platforms.",
     tag: "Current",
   },
   {
     icon: <Heart className="w-5 h-5" />,
-    title: "Open Source Contributor",
+    title: "AI / ML Project Developer",
     company: "Various Projects",
     date: "2023 - Present",
-    description: "Contributing to ML frameworks and tools, helping build the AI community.",
+    description: "Built end-to-end AI, ML, and automation projects focused on real-world data and business use cases.",
   },
 ];
 

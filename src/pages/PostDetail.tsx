@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -12,6 +13,12 @@ const PostDetail = () => {
   const { id } = useParams();
   const post = posts.find((p) => p.id === id);
 
+  useEffect(() => {
+    if (post?.externalUrl) {
+      window.location.replace(post.externalUrl);
+    }
+  }, [post]);
+
   if (!post) {
     return (
       <div className="min-h-screen bg-background">
@@ -22,6 +29,21 @@ const PostDetail = () => {
             <ArrowLeft className="h-4 w-4" />
             Back to posts
           </Link>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (post.externalUrl) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <main className="container-narrow py-16 md:py-24 text-center">
+          <h1 className="section-heading">Redirecting…</h1>
+          <a href={post.externalUrl} className="link-accent">
+            Click here if you are not redirected
+          </a>
         </main>
         <Footer />
       </div>

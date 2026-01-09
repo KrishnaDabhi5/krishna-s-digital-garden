@@ -5,13 +5,13 @@ const platforms = [
     icon: <Twitter className="w-5 h-5" />,
     title: "Writing & Discussions",
     description: "Follow my thoughts and insights about AI/ML, architectures, and tech on Twitter.",
-    cta: { label: "@krishnadabhi", href: "https://twitter.com/krishnadabhi" },
+    cta: { label: "@krishnadabhi59", href: "https://x.com/KrishnaDabhi59" },
   },
   {
     icon: <Youtube className="w-5 h-5" />,
     title: "Videos & Tutorials",
     description: "Check out AI/ML deep dives and tutorials on complex topics made simple.",
-    cta: { label: "Watch videos", href: "https://youtube.com", hasPlay: true },
+    cta: { label: "Watch Reels", href: "https://www.instagram.com/ai.r.aa/", hasPlay: true },
   },
 ];
 

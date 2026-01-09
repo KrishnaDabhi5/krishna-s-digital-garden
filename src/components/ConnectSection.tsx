@@ -16,22 +16,22 @@ export const ConnectSection = () => {
       </p>
       
       <div className="flex flex-wrap items-center gap-2 mb-4">
-        <a href="mailto:krishna@example.com" className="link-accent">
+        <a href="mailto:krishnadabhi59@gmail.com" className="link-accent">
           Email me <ExternalLink className="w-3 h-3" />
         </a>
         <span className="text-muted-foreground">•</span>
-        <a href="https://linkedin.com/in/krishnadabhi" target="_blank" rel="noopener noreferrer" className="link-accent">
+        <a href="https://www.linkedin.com/in/krishna-dabhi-b35259251/" target="_blank" rel="noopener noreferrer" className="link-accent">
           LinkedIn <ExternalLink className="w-3 h-3" />
         </a>
         <span className="text-muted-foreground">•</span>
-        <a href="https://github.com/krishnadabhi" target="_blank" rel="noopener noreferrer" className="link-accent">
+        <a href="https://github.com/krishnadabhi5" target="_blank" rel="noopener noreferrer" className="link-accent">
           GitHub <ExternalLink className="w-3 h-3" />
         </a>
       </div>
       
       <p className="text-muted-foreground text-sm">
         feel free to DM me on{" "}
-        <a href="https://twitter.com/krishnadabhi" target="_blank" rel="noopener noreferrer" className="link-accent">
+        <a href="https://x.com/KrishnaDabhi59" target="_blank" rel="noopener noreferrer" className="link-accent">
           𝕏 <ExternalLink className="w-3 h-3" />
         </a>
         {" "}for quick chats!

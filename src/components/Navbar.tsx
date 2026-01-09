@@ -7,7 +7,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Posts", href: "/posts" },
   { label: "Projects", href: "/projects" },
-  { label: "YouTube", href: "https://youtube.com", external: true },
+  { label: "Resume", href: "https://drive.google.com/file/d/1IepCy6PUi7ubsP3S1h_O3CjBUGqp9OPf/view?usp=drive_link", external: true },
 ];
 
 export const Navbar = () => {
