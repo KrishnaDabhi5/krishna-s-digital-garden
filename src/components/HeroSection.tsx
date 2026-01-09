@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
   { label: "@krishnadabhi59", href: "https://x.com/KrishnaDabhi59", icon: "𝕏" },
@@ -16,9 +17,9 @@ export const HeroSection = () => {
         <h1 className="text-3xl md:text-4xl font-serif leading-none">krishna dabhi</h1>
       </div>
       
-      <a href="/posts" className="link-accent text-sm mb-6 block">
+      <Link to="/posts" className="link-accent text-sm mb-6 block">
         Writings <ExternalLink className="w-3 h-3" />
-      </a>
+      </Link>
       
       <p className="text-foreground/80 leading-relaxed mb-6 max-w-lg">
         hi, i am krishna dabhi, an AI/ML enthusiast passionate about building intelligent systems. 

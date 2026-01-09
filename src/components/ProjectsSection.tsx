@@ -1,4 +1,5 @@
 import { ArrowRight, BookOpen, Sparkles, Code, Brain } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Project {
   icon: React.ReactNode;
@@ -60,15 +61,23 @@ export const ProjectsSection = () => {
               ))}
             </div>
             
-            <a
-              href={project.cta.href}
-              {...(project.cta.href.startsWith("http")
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
-              className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
-            >
-              {project.cta.label} <ArrowRight className="w-4 h-4" />
-            </a>
+            {project.cta.href.startsWith("http") ? (
+              <a
+                href={project.cta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+              >
+                {project.cta.label} <ArrowRight className="w-4 h-4" />
+              </a>
+            ) : (
+              <Link
+                to={project.cta.href}
+                className="inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+              >
+                {project.cta.label} <ArrowRight className="w-4 h-4" />
+              </Link>
+            )}
           </div>
         ))}
       </div>
