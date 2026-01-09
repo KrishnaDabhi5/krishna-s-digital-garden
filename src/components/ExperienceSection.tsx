@@ -25,7 +25,6 @@ const experiences: ExperienceItem[] = [
     companyUrl: "https://www.instagram.com/ai.r.aa/",
     date: "Dec 2025 - Present",
     description: "AIRAA Infotech builds AI-powered software and digital products for startups and businesses. It focuses on AI, data-driven solutions, and scalable web platforms.",
-    tag: "Current",
   },
   {
     icon: <Heart className="w-5 h-5" />,
