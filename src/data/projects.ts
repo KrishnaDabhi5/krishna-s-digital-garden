@@ -69,7 +69,7 @@ export const projects: Project[] = [
   {
     id: "job-hunt-automation",
     title: "Job Hunt Automation (n8n)",
-    description: "Automated job search workflow using n8n — filters jobs based on skills, location, and sends updates via Telegram.",
+    description: "Automated job search workflow using n8n - filters jobs based on skills, location, and sends updates via Telegram.",
     problem: "Manual job searching is time-consuming and error-prone.",
     approach: "Built automated workflow with n8n, integrated Airtable for data storage and Telegram for notifications.",
     result: "Reduced manual effort by 90% and automated 500+ job postings monthly.",
