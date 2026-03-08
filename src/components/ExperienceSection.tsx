@@ -19,14 +19,6 @@ const experiences: ExperienceItem[] = [
     description: "Focusing on AI/ML, Deep Learning, and Computer Vision research.",
   },
   {
-    icon: <Briefcase className="w-5 h-5" />,
-    title: "Co-Founder & CTO",
-    company: "AIRAA",
-    companyUrl: "https://www.linkedin.com/company/bheru/?viewAsMember=true",
-    date: "Dec 2025 - Present",
-    description: "AIRAA Infotech builds AI-powered software and digital products for startups and businesses. It focuses on AI, data-driven solutions, and scalable web platforms.",
-  },
-  {
     icon: <Heart className="w-5 h-5" />,
     title: "AI / ML Project Developer",
     company: "Various Projects",
