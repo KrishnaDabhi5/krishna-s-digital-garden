@@ -18,7 +18,7 @@ const platforms = [
 export const FindMeSection = () => {
   return (
     <section className="container-narrow py-12">
-      <h2 className="section-heading">find me online</h2>
+      <h2 className="section-heading">Find me online</h2>
       
       <div className="grid md:grid-cols-2 gap-4">
         {platforms.map((platform, index) => (
