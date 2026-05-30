@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
         🤖
         </div>
-        <h1 className="text-3xl md:text-4xl font-serif leading-none">krishna dabhi</h1>
+        <h1 className="text-3xl md:text-4xl font-serif leading-none">Krishna Dabhi</h1>
       </div>
       
       <Link to="/posts" className="link-accent text-sm mb-6 block">
@@ -22,8 +22,8 @@ export const HeroSection = () => {
       </Link>
       
       <p className="text-foreground/80 leading-relaxed mb-6 max-w-lg">
-        hi, i am krishna dabhi, an AI/ML enthusiast passionate about building intelligent systems. 
-        i explore deep learning architectures, work on research projects, and love sharing knowledge 
+        Hi, I am Krishna Dabhi, an AI/ML enthusiast passionate about building intelligent systems. 
+        I explore deep learning architectures, work on research projects, and love sharing knowledge 
         about the fascinating world of artificial intelligence.
       </p>
       
