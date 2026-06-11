@@ -54,6 +54,183 @@ Data engineering in 2026 is more exciting than ever, and more cluttered with hyp
 That is still the job. And I still love it.`,
   },
   {
+    id: "ETL Pipeline Best Practices: Lessons From Building Real Pipelines",
+    title: "ETL Pipeline Best Practices: Lessons From Building Real Pipelines",
+    date: "2026-05-20",
+    tags: ["ETL", "Data Engineering", "Python", "Best Practices", "Pipelines"],
+    excerpt: "ETL sounds simple until you are three weeks in and your pipeline keeps silently dropping rows. Here are the lessons I learned the hard way building production pipelines for real clients.",
+    content: `ETL Pipeline Best Practices: Lessons From Building Real Pipelines
+ETL sounds simple on paper. Extract data from somewhere. Transform it. Load it somewhere else. Done.
+Then you build your first real pipeline and nothing works the way you expected.
+Here is what I have learned after building ETL systems for clients across the US, Canada, and Europe.
+ 
+Never Trust the Source Data
+This is rule number one. Always.
+I have worked with APIs that returned null where they promised a string. Databases with duplicate primary keys. CSV exports with inconsistent date formats across the same column.
+Your first transformation step should always be validation. Check types. Check nulls. Check ranges. Log everything that looks wrong before you touch it.
+Silent data corruption is the worst kind. Your pipeline succeeds, your dashboard looks fine, and the numbers are quietly wrong.
+ 
+Idempotency Is Not Optional
+Every pipeline you build should be safe to run twice.
+If a job fails halfway and you rerun it, you should get the same result without duplicating or corrupting data. This means using upserts instead of inserts, tracking watermarks for incremental loads, and never assuming a job completed just because it did not throw an error.
+I learned this the hard way when a client's sales data got doubled after a retry. Not a fun conversation.
+ 
+Log Everything. Monitor More.
+A pipeline that runs without alerts is not a healthy pipeline. It is an unmonitored one.
+Log row counts at every stage. Log how long each step takes. Set alerts for when a source returns zero rows, because zero rows is almost never correct and almost never raises an exception.
+Good observability has saved me from client escalations more times than I can count.
+ 
+Modular Beats Monolithic Every Time
+When I started, I wrote pipelines as single long scripts. Extract, transform, and load all in one file.
+The moment requirements changed, which they always do, the whole thing needed rewriting.
+Now I split every pipeline into clear stages. Each stage has one job. Each stage can be tested independently. When something breaks, I know exactly where to look.
+dbt enforces this naturally for transformations. For orchestration, Prefect and Dagster make modularity the default.
+ 
+Keep Business Logic Out of SQL When You Can
+SQL is great for querying. It is terrible for version control, testing, and collaboration when it holds all your business logic.
+Move complex transformations into dbt models or Python where you can write unit tests, add documentation, and track changes in Git.
+Your future self and your clients will thank you.
+ 
+Final Thoughts
+Good ETL is boring in the best way. It runs on schedule, loads clean data, and nobody has to think about it.
+Getting there takes discipline. Validate early. Build idempotent jobs. Monitor obsessively. Keep things modular.
+The pipeline nobody talks about is the one doing its job perfectly.`,
+  },
+  {
+    id: "My Freelance Journey: What Three Years of Working With International Clients Taught Me",
+    title: "My Freelance Journey: What Three Years of Working With International Clients Taught Me",
+    date: "2026-04-15",
+    tags: ["Freelancing", "Career", "AI Engineering", "Personal", "Btechkers"],
+    excerpt: "I started freelancing as a second-year engineering student with no portfolio and one project. Three years and clients across three continents later, here is everything I wish I had known on day one.",
+    content: `My Freelance Journey: What Three Years of Working With International Clients Taught Me
+I started freelancing in 2022. I was a second-year B.Tech student in Surat with no real portfolio, no network, and a lot of confidence I had not yet earned.
+Three years later I have worked with startups and businesses across the US, Canada, and Europe. I built Btechkers as the vehicle for this work. And I learned more in those three years than I could have in a decade of classroom education.
+Here is what I wish someone had told me at the start.
+ 
+Your First Client Does Not Need to Be Perfect
+I spent weeks trying to find the perfect first project. Good budget, interesting problem, clear scope.
+That does not exist for someone with no track record.
+Take the small project. Do it exceptionally well. That client becomes your first testimonial, your first referral, and your first proof that you can deliver. Everything compounds from there.
+ 
+Scope Creep Will Eat You Alive If You Let It
+My biggest early mistakes were all about scope. A client would ask for one thing, I would deliver it, then they would ask for one more thing, and then another. Before I knew it I had tripled the work for the same price.
+Now every project starts with a written scope document. Not a long one. Just clear. What is included, what is not, and what happens if requirements change.
+Clients who push back on this are telling you something important about how the project will go.
+ 
+Time Zones Are a Skill
+Working with US and European clients from India means your mornings are their previous evening and your evenings are their morning. Async communication becomes your superpower.
+Write updates that do not need a reply to move forward. Document decisions immediately after calls. Never leave a conversation with unclear next steps.
+The clients who trusted me most were the ones who always knew exactly where things stood, even when we had not spoken in two days.
+ 
+Charge for Outcomes, Not Hours
+Early on I charged by the hour. Every client wanted to know how long things would take and I spent more time estimating than building.
+Switching to project-based pricing changed everything. The client knows their total cost upfront. I have an incentive to work efficiently. And the conversation moves from time to value.
+What is this automation worth to your business? That is the right question to be answering.
+ 
+Specialization Gets You Better Clients
+When I called myself a general developer I attracted general work at general rates.
+When I started positioning around AI engineering, ETL pipelines, and data solutions for international businesses, the quality of enquiries changed completely. Clients came with specific problems that matched my skills. Proposals became easier. Rates improved.
+Being known for something specific is more valuable than being available for anything.
+ 
+Final Thoughts
+Freelancing is not passive income or easy money. It is running a business, managing clients, delivering quality, and constantly learning, all at the same time.
+But the autonomy, the variety of problems, and the direct connection between your skill and your income make it unlike anything else.
+Three years in, I am still learning. But I would not trade it.`,
+  },
+  {
+    id: "Python for Data Engineers: The Only Guide You Actually Need",
+    title: "Python for Data Engineers: The Only Guide You Actually Need",
+    date: "2026-03-10",
+    tags: ["Python", "Data Engineering", "ETL", "Pandas", "Beginner", "Career"],
+    excerpt: "Python is the language of data engineering. But most tutorials teach you Python the wrong way for this job. Here is exactly what you need to learn and what you can safely skip.",
+    content: `Python for Data Engineers: The Only Guide You Actually Need
+Every data engineering job description lists Python. Every tutorial teaches you Python for web development or data science. And most of that knowledge does not transfer cleanly to building pipelines.
+Here is what you actually need to know as a data engineer.
+ 
+Start With the Fundamentals, But Only These Ones
+You do not need to master all of Python. You need to master the parts that show up in data work every single day.
+• Data types: strings, integers, floats, booleans, lists, dictionaries, tuples
+• Control flow: loops, conditionals, list comprehensions
+• Functions: writing clean reusable functions with clear inputs and outputs
+• Error handling: try and except blocks, because pipelines fail and you need to handle it gracefully
+• File I/O: reading and writing CSV, JSON, and Parquet files
+If you are solid on these, you can build real things.
+ 
+Pandas Is Your Most Important Library
+Pandas is how you work with tabular data in Python. You will use it constantly.
+Learn how to read data from CSV, Excel, and databases. Learn how to filter rows, select columns, and handle missing values. Learn groupby and merge because most real transformations involve aggregation and joining.
+Do not try to memorize everything. Learn the concepts and look up the syntax when you need it.
+ 
+SQLAlchemy and Database Connections
+Data engineers move data between systems. That means connecting to databases.
+SQLAlchemy is the standard Python library for this. Learn how to create a connection string, read a table into a dataframe, and write a dataframe back to a database table.
+Once you understand this pattern, connecting to Postgres, MySQL, BigQuery, or Snowflake is just a different connection string.
+ 
+Working With APIs
+A huge amount of data engineering involves pulling data from third-party APIs. REST APIs, webhooks, streaming endpoints.
+Learn the requests library. Understand how to handle pagination, authentication headers, and rate limits. Learn how to parse JSON responses into dataframes.
+Most data you will ever extract from the web comes through an API.
+ 
+Environment Management and Project Structure
+This is the part tutorials always skip and it is the part that makes you look professional.
+Use virtual environments for every project. Keep your dependencies in a requirements.txt file. Store secrets in environment variables, never hardcoded in your scripts. Structure your project with clear folders for source code, configuration, and tests.
+These habits separate someone writing scripts from someone building systems.
+ 
+What You Can Skip for Now
+• Advanced object-oriented programming
+• Web frameworks like Flask or Django
+• Async programming
+• Machine learning libraries like scikit-learn or PyTorch
+These are useful eventually but they will not make you a better data engineer in your first two years.
+ 
+Final Thoughts
+Python for data engineering is not about knowing everything. It is about knowing the right things deeply.
+Fundamentals, Pandas, database connections, API calls, and clean project structure will take you further than any advanced framework.
+Build something real with each concept you learn. That is the only way it sticks.`,
+  },
+  {
+    id: "Power BI in 2026: Why It Is Still the Best Tool for Business Dashboards",
+    title: "Power BI in 2026: Why It Is Still the Best Tool for Business Dashboards",
+    date: "2026-02-18",
+    tags: ["Power BI", "Data Visualization", "Business Intelligence", "Dashboards", "Analytics"],
+    excerpt: "Everyone is talking about AI-powered analytics tools. But after building dashboards for clients across three continents, I keep coming back to Power BI. Here is why it still wins.",
+    content: `Power BI in 2026: Why It Is Still the Best Tool for Business Dashboards
+Every few months a new analytics tool launches promising to replace dashboards with AI. Ask your data a question in plain English and get an instant answer.
+It is impressive in demos. It rarely solves the real problem.
+After building reporting solutions for clients in the US, Canada, and Europe, I keep coming back to Power BI. Here is why.
+ 
+The Business User Actually Uses It
+The best dashboard is the one people open every morning.
+Power BI sits inside Microsoft 365, which is where most businesses already live. It connects to Excel files, SharePoint lists, Teams channels, and Azure data sources without any setup from the user.
+When your dashboard is one click away inside Teams, adoption is not a problem. When it is a separate tool with a separate login, it becomes optional. And optional means ignored.
+ 
+DAX Is Painful Until It Is Powerful
+I will be honest. DAX, the formula language in Power BI, is confusing at first. The syntax is unlike SQL or Python and the mental model takes time to build.
+But once it clicks, you can build calculations that would take dozens of SQL lines and express them cleanly inside a measure. Rolling averages, year-over-year comparisons, dynamic ranking, complex filters. DAX handles all of it.
+The learning curve is worth it. Every dashboard I build for clients uses DAX measures for the core business logic.
+ 
+DirectQuery Changed the Game for Live Data
+For years the knock on Power BI was that it required importing data into a model, which meant stale reports.
+DirectQuery mode changed this. Connect directly to your data warehouse and every visual queries live data on load. No scheduled refresh. No data delay.
+Combined with a well-modelled Snowflake or BigQuery dataset, you get real-time business intelligence without building a custom reporting layer.
+ 
+The AI Features Are Actually Useful Now
+I was skeptical of Power BI's AI features when they first launched. Most felt like gimmicks.
+Smart narratives, anomaly detection, and the Q&A visual have genuinely matured. I now use anomaly detection on time series visuals for clients who want to be alerted when a metric behaves unexpectedly. It works quietly and well.
+The key is treating these as supplements to a well-designed dashboard, not replacements for one.
+ 
+What Still Frustrates Me
+Power BI is not perfect.
+The web version still lags behind the desktop app in design capabilities. Custom visuals from the marketplace are inconsistent in quality. And the licensing model is confusing for smaller clients who do not need a full Microsoft 365 plan.
+Tableau still beats it on pure visual flexibility. Looker is better for teams with strong SQL skills who want code-first reporting.
+But for most business clients who need reliable dashboards connected to their existing data, Power BI is the right choice.
+ 
+Final Thoughts
+The best analytics tool is the one that answers the business question, gets used consistently, and does not require a data team to maintain.
+For most of the clients I work with, that is Power BI.
+The hype around AI-native analytics is real. But until those tools match Power BI on reliability, ecosystem integration, and adoption, I will keep building in Power BI and sleeping well at night.`,
+  },
+  {
     id: "Building ML Models from Scratch",
     title: "Building ML Models from Scratch",
     date: "2025-12-13",
