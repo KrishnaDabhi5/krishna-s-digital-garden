@@ -22,8 +22,22 @@ const experiences: ExperienceItem[] = [
     icon: <Heart className="w-5 h-5" />,
     title: "AI / ML Project Developer",
     company: "Various Projects",
-    date: "2023 - Present",
+    date: "2022 - 2026",
     description: "Built end-to-end AI, ML, and automation projects focused on real-world data and business use cases.",
+  },
+  {
+    icon: <GraduationCap className="w-5 h-5" />,
+    title: "Data Engineer at SparkBeta Tech",
+    company: "Software company",
+    date: "2026 - Present",
+    description: "Designing and optimizing scalable data pipelines, ETL workflows, and data solutions to support analytics, business intelligence, and AI initiatives. Working on-site with cross-functional teams to ensure reliable, production-grade data infrastructure."
+  },
+  {
+    icon: <Heart className="w-5 h-5" />,
+    title: "Freelance AI & Data Engineer",
+    company: "Various Projects",
+    date: "2022 - Present, 4+ years",
+    description: "Working independently with startups and businesses across the US, Canada, and Europe to deliver AI, automation, and data engineering solutions. Projects span LLM integrations, ETL pipelines, Power BI dashboards, and end-to-end ML systems for real-world business use cases.",
   },
 ];
 
