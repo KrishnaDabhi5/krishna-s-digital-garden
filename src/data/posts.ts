@@ -11,6 +11,49 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    id: "Data Engineering in 2026: What Nobody Told Me When I Started",
+    title: "Data Engineering in 2026: What Nobody Told Me When I Started",
+    date: "2026-01-23",
+    tags: ["Data Engineering", "Opinion", "ETL", "AI", "Freelancing", "Career"],
+    excerpt: "Three years of building pipelines, breaking things, and learning what actually matters in modern data engineering. Here is what I have learned working with clients across the US, Canada, and Europe.",
+    content: `Data Engineering in 2026: What Nobody Told Me When I Started
+I have been building data pipelines since 2022. First as a freelancer, figuring things out client by client. Now as a full-time Data Engineer. And honestly? The field looks nothing like what the YouTube tutorials promised.
+Here is what I have actually learned.
+ 
+Everyone's Talking About AI. The Data Is Still Broken.
+Every client I have worked with, startups in the US, scale-ups in Europe, has the same problem. They want AI. They want dashboards. They want data-driven decisions.
+But their data is sitting in five different places, half of it duplicated, none of it documented.
+AI does not fix bad data. It amplifies it.
+Before you think about LLMs or ML models, someone has to do the unglamorous work. Cleaning sources, building reliable ingestion pipelines, defining what a customer or an order actually means in your database. That is still the most valuable thing a data engineer does in 2026.
+ 
+The Modern Stack Is Genuinely Good Now
+I will give the ecosystem credit. The tooling has gotten really good.
+dbt has become the standard for transformation logic and it deserves it. Airflow is still everywhere but people are quietly moving to Prefect and Dagster for simpler orchestration. DuckDB changed how I think about local development. Cloud warehouses like BigQuery and Snowflake have gotten fast enough that a lot of optimization conversations from three years ago are just irrelevant now.
+The stack matured. The problem is that most companies are still on the stack from five years ago.
+ 
+Automation Is Eating the Junior Work. Not the Thinking.
+People love to say AI will replace data engineers. I disagree, but with a caveat.
+AI is absolutely eating the boilerplate. Writing basic SQL transformations, generating schema docs, scaffolding pipeline code. These are tasks I now do in minutes with the right tools. I have built systems using the Claude API that qualify and score leads automatically. I have automated ETL workflows that used to take hours of manual wrangling.
+But the thinking, understanding what the business actually needs, why the numbers do not match, which data source to trust, that is not automated. That is the work that matters.
+The engineers who will struggle are the ones who only knew how to write the boilerplate.
+ 
+Freelancing Taught Me What No Job Could
+Three years of working with international clients taught me something university did not. Data problems are business problems in disguise.
+A client in Canada did not need a better pipeline. They needed to stop losing revenue because their sales and product data never talked to each other. A startup in Europe did not need a dashboard. They needed someone to tell them which of their metrics were vanity and which actually predicted growth.
+Technical skills got me in the room. Understanding the business kept me there.
+ 
+What I Would Tell Myself Starting Out
+• Learn SQL deeply before anything else. Seriously.
+• Pick one orchestration tool and build something real with it.
+• Document everything. Future you will be grateful.
+• The fanciest architecture is useless if nobody trusts the numbers.
+• Talk to the people who use the data, not just the people who request it.
+ 
+Final Thoughts
+Data engineering in 2026 is more exciting than ever, and more cluttered with hype than ever. The fundamentals still win. Clean data, reliable pipelines, clear documentation, and someone who understands why it all matters.
+That is still the job. And I still love it.`,
+  },
+  {
     id: "Building ML Models from Scratch",
     title: "Building ML Models from Scratch",
     date: "2025-12-13",
